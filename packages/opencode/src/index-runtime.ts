@@ -12,7 +12,6 @@ const hostname = process.env.HOSTNAME || process.env.OPENCODE_HOSTNAME || "127.0
 const mdns = process.env.MDNS === "true" || process.env.OPENCODE_MDNS === "true"
 const mdnsDomain = process.env.MDNS_DOMAIN || process.env.OPENCODE_MDNS_DOMAIN || "opencode.local"
 const cors = process.env.CORS ? process.env.CORS.split(",") : []
-const openWeb = process.env.OPEN_WEB || "false"
 
 const ServerRuntimeLaunch = Effect.fn("ServerRuntime.launch")(function* () {
   if (!Flag.OPENCODE_SERVER_PASSWORD) {
